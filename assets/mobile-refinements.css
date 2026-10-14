@@ -1,0 +1,153 @@
+/* Strong action colors and touch-first refinements. Loaded after the base design. */
+:root{--yellow:#ffcc00;--yellow-light:#fff5c6;--red:#d52b25;--green:#21c86c}
+.button{min-height:56px;font-size:14px;font-weight:750;border-radius:6px}
+.button.yellow{background:var(--yellow);box-shadow:0 4px 0 #b68b002b}
+.button.yellow:hover{background:#edbc00}
+.button.red{background:var(--red);border-color:var(--red);color:#fff;box-shadow:0 4px 0 #8c171718}
+.button.red:hover{background:#b91f1a;border-color:#b91f1a}
+.button.whatsapp{background:var(--green);color:#102b1b;box-shadow:0 4px 0 #137e3525}
+.button.whatsapp:hover{background:#1db55f;color:#102b1b}
+.button:active{transform:translateY(1px);box-shadow:none}
+.nav-phone{min-height:46px;padding:10px 14px;border-radius:6px;background:var(--red);color:#fff;flex-shrink:0}
+.nav-phone:hover{background:#b91f1a}
+.main-nav{min-width:0}
+.nav-row{gap:22px}
+.cta-band .button.yellow{border-color:var(--ink);box-shadow:none}
+.contact-option .button svg{width:20px;height:20px;margin:0}
+.hero-copy,.hero-visual,.split>div,.section-heading>div,.faq-layout>div,.booking-layout>*,.preview-panel,.contact-options>*,.location-panel>*,.service-detail>div,.footer-grid>div,.field-grid>*{min-width:0}
+.button,.route-button,.text-link{max-width:100%}
+.hero-proof{flex-wrap:wrap}
+.hero-proof .proof-stars,.hero-proof strong{white-space:nowrap}
+.hero-visual>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.icon-button{width:46px;height:46px}
+.menu-toggle{min-width:46px;min-height:46px;padding:10px}
+.suggestions button{min-height:44px;font-size:12px;padding:9px 12px}
+.swap-row button{min-height:44px;font-size:12px;padding:8px 3px}
+.copy-row button{min-height:44px;font-size:12px}
+.quick-foot a,.route-button{min-height:44px;display:inline-flex;align-items:center}
+.check-row{min-height:44px}
+.check-row input{flex-shrink:0}
+.field input,.field select,.field textarea{min-width:0;max-width:100%}
+.field input[type=date],.field input[type=time]{display:block;min-inline-size:0;inline-size:100%;max-inline-size:100%}
+.field input::-webkit-date-and-time-value{text-align:left;min-width:0}
+.radio-choice{display:flex;align-items:center;gap:7px;min-height:48px}
+.radio-choice input{flex-shrink:0;margin:0}
+.copy-row{flex-wrap:wrap}
+.form-note,.review-disclosure{font-size:12px}
+.mobile-actions{display:none}
+
+@media(max-width:1150px){
+  .nav-phone{width:46px;justify-content:center;padding:0}
+  .nav-row{gap:18px}
+}
+@media(max-width:960px){
+  .booking-layout{grid-template-columns:minmax(0,1fr);max-width:720px}
+  .field-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .booking-layout aside{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:28px}
+  .preview-panel{grid-column:1/-1}
+}
+@media(max-width:900px){
+  .nav-phone{font-size:0;margin-left:auto}
+  .main-nav{max-height:calc(100vh - 90px);max-height:calc(100dvh - 90px);overflow-y:auto;overscroll-behavior:contain}
+  .main-nav a{min-height:48px}
+  .quick-input input{font-size:16px}
+  .field input,.field select,.field textarea{font-size:16px}
+}
+@media(max-width:680px){
+  html{scroll-padding-top:88px;scroll-padding-bottom:110px}
+  body:not(.page-booking){padding-bottom:calc(80px + env(safe-area-inset-bottom,0px))}
+  .wrap{width:calc(100% - 36px)}
+  .nav-row{gap:10px;height:72px}
+  .brand{gap:9px}
+  .brand-name{font-size:25px}
+  .brand-name small{font-size:8px;letter-spacing:1.8px}
+  .brand-symbol{width:31px;height:33px}
+  .nav-phone{min-width:46px;width:46px;min-height:46px}
+  .hero h1{font-size:clamp(43px,11.8vw,70px)}
+  .hero h1 span{max-width:100%}
+  .hero .actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:10px}
+  .hero .actions .button{font-size:14px;min-height:56px;padding:13px 10px;gap:7px}
+  .hero .actions .button svg{width:18px;height:18px}
+  .hero-proof{row-gap:6px;font-size:12px}
+  .hero-proof strong{font-size:12px}
+  .hero-proof>span:last-child{flex-basis:100%}
+  .hero-proof .divider{display:none}
+  .hero-visual{aspect-ratio:1.4}
+  .hero .lead{font-size:16px;line-height:1.65}
+  .quick-fields{grid-template-columns:minmax(0,1fr)}
+  .quick-input input{font-size:16px;min-height:29px}
+  .quick-input label{font-size:11px}
+  .quick-foot{font-size:12px}
+  .quick-foot a{white-space:normal;line-height:1.5;margin-top:5px}
+  .trust-strip span{font-size:12px}
+  .section-heading p,.service-card p,.steps p,.contact-option p,.location-panel p{font-size:15px}
+  .service-card .card-link{font-size:13px;min-height:44px}
+  .review-head{flex-wrap:wrap;align-items:flex-end}
+  .review-controls{margin-top:0;gap:8px}
+  .review-card{padding:24px}
+  .review-card blockquote{font-size:15px}
+  .review-person b{font-size:13px}
+  .review-person span{font-size:12px}
+  .review-summary .small{font-size:12px}
+  .review-rail{grid-auto-columns:90%}
+  .faq-list summary{font-size:16px;line-height:1.5}
+  details>p{font-size:15px}
+  .cta-band .actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));min-width:0}
+  .cta-band .button{font-size:14px;padding:13px 9px;gap:7px;min-height:56px}
+  .page-intro h1{font-size:clamp(36px,10.8vw,44px);overflow-wrap:anywhere;hyphens:auto}
+  .page-intro .lead{font-size:16px}
+  .service-detail{grid-template-columns:44px minmax(0,1fr);gap:17px}
+  .service-detail h2{overflow-wrap:anywhere;hyphens:auto}
+  .service-detail p,.service-detail ul{font-size:15px}
+  .service-detail .button{font-size:14px;min-height:56px;gap:8px;padding:14px}
+  .form-panel{padding:24px 18px}
+  .form-panel legend{line-height:1.5}
+  .field>span{font-size:13px}
+  .field input,.field select,.field textarea{min-height:50px}
+  .field input,.field textarea{scroll-margin:100px 0}
+  .radio-choice{font-size:14px;padding:12px 10px}
+  .check-row{font-size:14px}
+  #booking-form .button.full{font-size:15px;min-height:58px;padding:15px 12px;gap:9px}
+  #booking-form .button.full svg:last-child{display:none}
+  .form-note{font-size:13px}
+  .route-button{font-size:13px;line-height:1.5}
+  .preview-panel>p{font-size:14px}
+  .message-box pre{font-size:14px;line-height:1.65}
+  .copy-row span{font-size:12px}
+  .booking-layout aside{display:block}
+  .contact-aside>a{font-size:24px}
+  .location-panel{padding:25px}
+  .footer li a{display:inline-flex;align-items:center;min-height:44px;font-size:13px}
+  .footer li{margin:0}
+  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}
+  .footer-grid>div:nth-child(2) a{overflow-wrap:anywhere;hyphens:auto}
+  .mobile-actions{position:fixed;bottom:0;left:0;right:0;z-index:35;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px max(18px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px));background:#f7f7f0f5;border-top:1px solid #d3d9cc;box-shadow:0 -5px 20px #19231f0a}
+  .mobile-actions .button{font-size:15px;min-height:56px;padding:12px 10px;box-shadow:none;gap:8px}
+  body.is-typing .mobile-actions,body.menu-is-open .mobile-actions{display:none}
+  .page-booking .mobile-actions{display:none}
+}
+@media(max-width:440px){
+  .field-grid{grid-template-columns:minmax(0,1fr)}
+  .field-grid .field{margin-bottom:4px}
+}
+@media(max-width:380px){
+  .hero .actions,.cta-band .actions{grid-template-columns:minmax(0,1fr)}
+  .hero .actions .button,.cta-band .button{font-size:15px}
+  .service-grid{grid-template-columns:minmax(0,1fr);gap:22px}
+  .service-card{padding-top:22px}
+  .service-card .service-icon{margin-bottom:16px}
+  .service-card h3{font-size:26px}
+  .review-rail{grid-auto-columns:96%}
+  .image-caption{left:15px;bottom:17px}
+  .image-caption b{font-size:15px}
+  .round-seal{width:67px;height:67px;right:14px;bottom:15px}
+  .round-seal b{font-size:23px}
+  .choice-row{flex-direction:column}
+  .service-detail{grid-template-columns:minmax(0,1fr);gap:18px}
+  .service-detail>div:last-child{grid-column:auto}
+  #booking-form .button.full{font-size:14px;gap:7px}
+  .form-panel{padding:22px 15px}
+  .mobile-actions{padding-left:14px;padding-right:14px;gap:8px}
+  .mobile-actions .button{font-size:14px;gap:6px}
+}
+@media(prefers-reduced-motion:reduce){.button:active,.button:hover{transform:none}}
